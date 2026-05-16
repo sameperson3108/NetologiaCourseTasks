@@ -1,6 +1,5 @@
-package part1.ru.netology.service;
+package part1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class TicTacToe {
