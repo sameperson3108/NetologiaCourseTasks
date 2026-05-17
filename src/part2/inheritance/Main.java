@@ -2,15 +2,23 @@ package part2.inheritance;
 
 public class Main {
     static void main() {
-        Person person = new Person("Petya", 10);
-        person.setAge(40);
-        person.setAge(-8);
-        person.happyBirthday();
-        System.out.println(person.getAge());
 
-        Singer singer = new Singer("Sasha", 12, 100);
-        singer.happyBirthday();
-        singer.sing("Good Morning");
-        System.out.println(singer.toString());
+        Instrument[] instruments = {
+                new Guitar(),
+                new Piano(),
+                new Flute(),
+                new Guitar()
+        };
+
+        boolean[][] shouldPlay = {
+                {false, true, true, true, true, false},
+                {true, false, true, false, true, false},
+                {false, false, true, true, false, false},
+                {false, true, true, true, true, false}
+        };
+
+        Song song = new Song(instruments, shouldPlay);
+        song.play();
+
     }
 }
